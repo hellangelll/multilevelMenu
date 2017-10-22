@@ -7,7 +7,7 @@
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" src="https://pic.qianmi.com/jslib/jquery/jquery-1.10.2.js"></script>
-    <!--<script type="text/javascript" src="js/jquery.cookie.js"></script>-->
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
 </head>
@@ -41,19 +41,11 @@
                                             <div class="ant-form-item-control ">
                                                 <div class="ant-select-lg ant-select ant-select-enabled"
                                                      style="width: 286px;">
-                                                    <div class="ant-select-selection
-            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true"
-                                                         aria-expanded="false" tabindex="0">
-                                                        <div class="ant-select-selection__rendered">
-                                                            <div unselectable="unselectable"
-                                                                 class="ant-select-selection__placeholder"
-                                                                 style="display: none; user-select: none;">请选择
-                                                            </div>
-                                                            <div class="ant-select-selection-selected-value" title=""
-                                                                 style="display: block; opacity: 1;"></div>
-                                                        </div>
-                                                        <span class="ant-select-arrow" unselectable="unselectable"
-                                                              style="user-select: none;"><b></b></span></div>
+                                                    <select style="width:286px;" class="ant-select-selection ant-select-selection--single">
+                                                        <option value="55">快消品|休闲食品|饼干蛋糕</option>
+                                                        <option value="6655">快消品|休闲食品|饼干蛋糕</option>
+                                                        <option value="77">快消品|休闲食品|饼干蛋糕</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,13 +54,13 @@
                                 <div class="ant-row classify-row">
                                     <div class="ant-col-24 normal-div">
                                         <p class="classify-row-toolbar">
-                                            <span catId="">您当前选择的是：快消品|休闲食品|坚果炒货</span></p>
+                                            <span catId="">您当前选择的是：快消品</span></p>
                                         <div class="ant-row classify-standard">
                                             <div class="ant-col-6 classify-standard-item">
                                                 <div class="ant-input-search-wrapper"><span
                                                         class="ant-input-preSuffix-wrapper"><input type="text"
                                                                                                    class="ant-input ant-input-search"
-                                                                                                   objId = "0"
+                                                                                                   objId="0"
                                                                                                    value=""
                                                                                                    placeholder="请输入名称/拼音字母"><span
                                                         class="ant-input-suffix"><i
@@ -76,14 +68,14 @@
                                                 </div>
                                                 <ul class="classify-standard-item-list">
                                                     <!--<li><a href="javascript:;" class="active"><span>快消品</span><i-->
-                                                            <!--class="anticon anticon-right"></i></a></li>-->
+                                                    <!--class="anticon anticon-right"></i></a></li>-->
                                                 </ul>
                                             </div>
                                             <div class="ant-col-6 classify-standard-item">
                                                 <div class="ant-input-search-wrapper"><span
                                                         class="ant-input-preSuffix-wrapper"><input type="text"
                                                                                                    class="ant-input ant-input-search"
-                                                                                                   objId = "1"
+                                                                                                   objId="1"
                                                                                                    value=""
                                                                                                    placeholder="请输入名称/拼音字母"><span
                                                         class="ant-input-suffix"><i
@@ -91,14 +83,14 @@
                                                 </div>
                                                 <ul class="classify-standard-item-list">
                                                     <!--<li><a href="javascript:;" class="active"><span>休闲食品</span><i-->
-                                                            <!--class="anticon anticon-right"></i></a></li>-->
+                                                    <!--class="anticon anticon-right"></i></a></li>-->
                                                 </ul>
                                             </div>
                                             <div class="ant-col-6 classify-standard-item">
                                                 <div class="ant-input-search-wrapper"><span
                                                         class="ant-input-preSuffix-wrapper"><input type="text"
                                                                                                    class="ant-input ant-input-search"
-                                                                                                   objId = "2"
+                                                                                                   objId="2"
                                                                                                    value=""
                                                                                                    placeholder="请输入名称/拼音字母"><span
                                                         class="ant-input-suffix"><i
@@ -106,16 +98,18 @@
                                                 </div>
                                                 <ul class="classify-standard-item-list">
                                                     <!--<li><a href="javascript:;"-->
-                                                           <!--class="active active-last"><span>坚果炒货</span></a></li>-->
+                                                    <!--class="active active-last"><span>坚果炒货</span></a></li>-->
                                                 </ul>
                                             </div>
                                             <div class="ant-col-6 classify-standard-item classify-standard-products">
-                                                <div class="classify-standard-item-tip"><p>亲，再往下选择试试，<br>有示例图片哟！</p><i class="qmIcon expression-hopeful"></i></div>
+                                                <div class="classify-standard-item-tip"><p>亲，再往下选择试试，<br>有示例图片哟！</p><i
+                                                        class="qmIcon expression-hopeful"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="ant-col-24 search-div hide">
-                                        <p class="classify-row-toolbar"><a href="javascript:;" class="close-search">关闭返回类目</a><span>匹配到<span class="t-red">7</span>个类目</span></p>
+                                        <p class="classify-row-toolbar"><a href="javascript:;" class="close-search">关闭返回类目</a><span>匹配到<span
+                                                class="t-red">7</span>个类目</span></p>
                                         <div class="ant-row classify-standard">
                                             <div class="ant-col-18 classify-standard-item classify-standard-keyword">
                                                 <ul class="classify-standard-item-list">

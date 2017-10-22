@@ -16,13 +16,13 @@ function HAT(jqObj) {
     this.dataList = [[],[],[]];
 
     this.init = function () {
-        localStorage.setItem("qmAccount", 15011680072);
-        localStorage.setItem("ticketMsgCount", 6);
-        localStorage.setItem("GUIDE_STEP", 999);
-        localStorage.setItem("msgCount", 0);
-        localStorage.setItem("sysTalkCount", 0);
-        localStorage.setItem("wares-standard-category:lastSelectedCat", '');
-        sessionStorage.setItem("QM_ROLE_VALUE", 281);
+        //localStorage.setItem("qmAccount", 15011680072);
+        //localStorage.setItem("ticketMsgCount", 6);
+        //localStorage.setItem("GUIDE_STEP", 999);
+        //localStorage.setItem("msgCount", 0);
+        //localStorage.setItem("sysTalkCount", 0);
+        //localStorage.setItem("wares-standard-category:lastSelectedCat", '');
+        //sessionStorage.setItem("QM_ROLE_VALUE", 281);
 
         //$.cookie('NTKF_T2D_CLIENTID', null);
         //$.cookie('SSOEXPIRES', null);
@@ -255,10 +255,41 @@ function HAT(jqObj) {
         }
     };
 
+    this.initSelect = function(){
+        var that = this;
+        var obj = $('.ant-select-selection--single');
+        obj.empty();
+        var value = $.cookie('menuSelectedList');
+        if ( value ){
+            value = value.split(',').reverse();
+            $.each(value,function(i,val){
+                var o = that.getMenuItenById(val);
+                if (o != {}) {
+                    obj.append("<option value='" + o.catId + "'>"+o.fullPathName+"</option>");
+                }
+            });
+
+            obj.unbind('change').change(function(){
+                var o = that.getMenuItenById($(this).val());
+                $('.' + that.id + ' .classify-row-toolbar span').html('您当前选择的是： ' + o.fullPathName).attr('catId', o.catId);
+                if(o.path != null && o.path != '' ){
+                    var arrPath = o.path.split(',');
+                    if ( arrPath.length ){
+                        $.each(arrPath,function(i,val){
+                            that.assignData(i, val);
+                        });
+                    }
+                }
+                that.assignData(o.depth-1, o.catId);
+            });
+        }
+    };
+
     //初始化页面
     this.initPage = function () {
         var that = this;
         this.fillData(0, 0);
+        this.initSelect();
 
         $('.' + this.id + ' .form-input-search').on('click', function () {
             var key = $(this).prev().val();
@@ -325,7 +356,27 @@ function HAT(jqObj) {
         //绑定下一步事件
         $('.ant-btn-primary').on('click',function(){
             var obj = $('.' + that.id + ' .classify-row-toolbar span');
-            alert(obj.html()+' ID: '+obj.attr('catId'));
+            var id = obj.attr('catId');
+            if( !id ){
+                alert('请先选择菜单');
+                return false;
+            }
+            var o = that.getMenuItenById(id);
+            if(o.subCatIds.length ){
+                alert('请选择到最后一级菜单');
+                return false;
+            }
+            var value = $.cookie('menuSelectedList'), list = [];
+            if (typeof value == 'undefined') value ='';
+            list = value.split(',');
+            if( list.length >= 10 ){
+                list.shift();
+                value = list.join(',');
+            }
+
+            $.cookie('menuSelectedList',value+','+id);
+            alert(obj.html()+' ID: '+id);
+            that.initSelect();
         });
     };
 }
