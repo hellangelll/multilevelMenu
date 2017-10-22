@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="https://pic.qianmi.com/jslib/jquery/jquery-1.10.2.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.cookie.js"></script>-->
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div class="page-wrapper" id="page-wrapper" style="background-color: rgb(255, 255, 255);">
+    <div style="height: 100%;"><!-- react-empty: 69 -->
+        <div>
+            <div style="padding-bottom: 50px;">
+                <div class="ant-tabs ant-tabs-top ant-tabs-line">
+                    <div class="ant-tabs-content ant-tabs-content-animated" style="margin-left: 0;">
+                        <div role="tabpanel" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active">
+                            <div id="meunList">
+                                <form class="ant-form ant-form-horizontal classify-form-center">
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-col-7 ant-form-item-label"><label class="">标准分类搜索</label></div>
+                                        <div class="ant-col-17">
+                                            <div class="ant-form-item-control "><input type="text" value=""
+                                                                                       placeholder="请输入商品分类关键词"
+                                                                                       class="ant-input ant-input-lg"
+                                                                                       style="width: 286px;">
+                                                <button type="button"
+                                                        class="ant-btn ant-btn-lg ant-btn-icon-only form-input-search">
+                                                    <i class="anticon anticon-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-col-7 ant-form-item-label"><label class="">您最近使用的标准分类</label>
+                                        </div>
+                                        <div class="ant-col-17">
+                                            <div class="ant-form-item-control ">
+                                                <div class="ant-select-lg ant-select ant-select-enabled"
+                                                     style="width: 286px;">
+                                                    <div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true"
+                                                         aria-expanded="false" tabindex="0">
+                                                        <div class="ant-select-selection__rendered">
+                                                            <div unselectable="unselectable"
+                                                                 class="ant-select-selection__placeholder"
+                                                                 style="display: none; user-select: none;">请选择
+                                                            </div>
+                                                            <div class="ant-select-selection-selected-value" title=""
+                                                                 style="display: block; opacity: 1;"></div>
+                                                        </div>
+                                                        <span class="ant-select-arrow" unselectable="unselectable"
+                                                              style="user-select: none;"><b></b></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="ant-row classify-row">
+                                    <div class="ant-col-24 normal-div">
+                                        <p class="classify-row-toolbar">
+                                            <span catId="">您当前选择的是：快消品|休闲食品|坚果炒货</span></p>
+                                        <div class="ant-row classify-standard">
+                                            <div class="ant-col-6 classify-standard-item">
+                                                <div class="ant-input-search-wrapper"><span
+                                                        class="ant-input-preSuffix-wrapper"><input type="text"
+                                                                                                   class="ant-input ant-input-search"
+                                                                                                   objId = "0"
+                                                                                                   value=""
+                                                                                                   placeholder="请输入名称/拼音字母"><span
+                                                        class="ant-input-suffix"><i
+                                                        class="anticon anticon-search ant-input-search-icon"></i></span></span>
+                                                </div>
+                                                <ul class="classify-standard-item-list">
+                                                    <!--<li><a href="javascript:;" class="active"><span>快消品</span><i-->
+                                                            <!--class="anticon anticon-right"></i></a></li>-->
+                                                </ul>
+                                            </div>
+                                            <div class="ant-col-6 classify-standard-item">
+                                                <div class="ant-input-search-wrapper"><span
+                                                        class="ant-input-preSuffix-wrapper"><input type="text"
+                                                                                                   class="ant-input ant-input-search"
+                                                                                                   objId = "1"
+                                                                                                   value=""
+                                                                                                   placeholder="请输入名称/拼音字母"><span
+                                                        class="ant-input-suffix"><i
+                                                        class="anticon anticon-search ant-input-search-icon"></i></span></span>
+                                                </div>
+                                                <ul class="classify-standard-item-list">
+                                                    <!--<li><a href="javascript:;" class="active"><span>休闲食品</span><i-->
+                                                            <!--class="anticon anticon-right"></i></a></li>-->
+                                                </ul>
+                                            </div>
+                                            <div class="ant-col-6 classify-standard-item">
+                                                <div class="ant-input-search-wrapper"><span
+                                                        class="ant-input-preSuffix-wrapper"><input type="text"
+                                                                                                   class="ant-input ant-input-search"
+                                                                                                   objId = "2"
+                                                                                                   value=""
+                                                                                                   placeholder="请输入名称/拼音字母"><span
+                                                        class="ant-input-suffix"><i
+                                                        class="anticon anticon-search ant-input-search-icon"></i></span></span>
+                                                </div>
+                                                <ul class="classify-standard-item-list">
+                                                    <!--<li><a href="javascript:;"-->
+                                                           <!--class="active active-last"><span>坚果炒货</span></a></li>-->
+                                                </ul>
+                                            </div>
+                                            <div class="ant-col-6 classify-standard-item classify-standard-products">
+                                                <div class="classify-standard-item-tip"><p>亲，再往下选择试试，<br>有示例图片哟！</p><i class="qmIcon expression-hopeful"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-col-24 search-div hide">
+                                        <p class="classify-row-toolbar"><a href="javascript:;" class="close-search">关闭返回类目</a><span>匹配到<span class="t-red">7</span>个类目</span></p>
+                                        <div class="ant-row classify-standard">
+                                            <div class="ant-col-18 classify-standard-item classify-standard-keyword">
+                                                <ul class="classify-standard-item-list">
+                                                    <li><a href="javascript:;"><span>快消品</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="t-center" style="margin-bottom: 50px;">
+                                    <button type="button" class="ant-btn ant-btn-primary"><span>下一步</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" aria-hidden="true"
+                             class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                        <div role="tabpanel" aria-hidden="true"
+                             class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                        <div role="tabpanel" aria-hidden="true"
+                             class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                    </div>
+                </div>
+            </div><!-- react-empty: 420 --></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var obj = $("#meunList");
+        var hat = new HAT(obj);
+        hat.init();
+    })
+</script>
+</html>
