@@ -263,6 +263,8 @@ function HAT(jqObj) {
         if ( value ){
             value = value.split(',').reverse();
             $.each(value,function(i,val){
+                if (val == '') return true;
+
                 var o = that.getMenuItenById(val);
                 if (o != {}) {
                     obj.append("<option value='" + o.catId + "'>"+o.fullPathName+"</option>");
