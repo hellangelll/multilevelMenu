@@ -302,7 +302,7 @@ function HAT(jqObj) {
 
             $.each(that.dataList[level],function(i,val){
                 if( keywords != '' ){
-                    if(val.pinyin.indexOf(keywords) >=0 || val.spinyin.indexOf(keywords) >= 0 ){
+                    if(val.pinyin.indexOf(keywords) >=0 || val.spinyin.indexOf(keywords) >= 0 || val.catName.indexOf(keywords) >=0 ){
                         //console.log(keywords+' '+val.pinyin+' '+val.spinyin);
                         arr.push('<li><a href="javascript:;" class="" catId=' + val.catId + '><span>' +
                             val.catName + '</span>'+(val.subCatIds.length>0?'<i class="anticon anticon-right"></i>':'')+'</a></li>');
